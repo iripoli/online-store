@@ -46,14 +46,8 @@ class HomeMenu extends React.Component {
 
    render(){
      return(
-     <div className="home-menu">{this.state.itemsData.map(({id, title, imageUrl, size, linkUrl}) =>{
-       return(<MenuItem
-       key={id} 
-       title={title}
-       imageUrl={imageUrl}
-       size={size}
-       linkUrl={linkUrl}
-        />)}
+     <div className="home-menu">{this.state.itemsData.map(({id, ...moreData}) =>{
+       return(<MenuItem key={id} {...moreData}/>)}
         )}
       </div>
        )
