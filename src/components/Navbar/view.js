@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { auth } from '../../firebase/firebase'
 
 import {ReactComponent as Logo} from '../../assets/img/logo.svg'
 import './style.scss'
 
-const Navbar = () => {
+const Navbar = ({currentUser}) => {
   return(
     <div className="header">
       <Link className='logo' to="/">
@@ -20,9 +21,13 @@ const Navbar = () => {
         <Link className="option" to="/contact">
           CONTACT
       </Link>
+
+      {
+        currentUser ? <div className="option" onClick={()=>auth.signOut()}>SIGN OUT</div> :  
       <Link className="option" to="/identify">
           SIGN IN
       </Link>
+      }
       </div>
     </div>
   )
