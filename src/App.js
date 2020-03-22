@@ -6,6 +6,7 @@ import HomePage from './containers/Home-Page';
 import './App.css';
 import Shop from './containers/Shop';
 import Navbar from './components/Navbar';
+import Identify from './containers/Identify';
 
 function App() {
   return (
@@ -14,8 +15,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={Shop} />
-
-
+        <Route exact path="/identify" component={Identify} />
       </Switch>
     </div>
   );
