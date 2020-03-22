@@ -11,11 +11,17 @@ const Navbar = () => {
         <Logo />
       </Link>
       <div className="options">
+      <Link className="option" to="/">
+          HOME
+      </Link>
         <Link className="option" to="/shop">
           SHOP
       </Link>
         <Link className="option" to="/contact">
           CONTACT
+      </Link>
+      <Link className="option" to="/identify">
+          SIGN IN
       </Link>
       </div>
     </div>
