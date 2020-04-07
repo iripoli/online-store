@@ -8,7 +8,6 @@ const HomePage = () => {
 	return (
 		<div className="homePage">
 			<HomeMenu /> 
-
 		</div>
 	)
 
