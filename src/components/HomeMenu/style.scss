@@ -4,3 +4,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media (max-width: 450px){
+  .home-menu{
+    width: 20rem;
+  }
+}

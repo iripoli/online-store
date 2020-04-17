@@ -67,3 +67,11 @@
     }
   }
 }
+
+
+@media (max-width: 450px){
+  .menu-item, .bgImage{
+    min-width: 9rem;
+  }
+
+}

@@ -50,3 +50,10 @@
     }
   }
 }
+
+@media (max-width: 450px){
+  .collectionItem{
+    min-width: 16rem;
+    margin-bottom: 1.5rem;
+  }
+}
