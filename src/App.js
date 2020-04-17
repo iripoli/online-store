@@ -8,7 +8,7 @@ import { auth, createUserProfileDoc } from './firebase/config'
 import { setCurrentUser } from './redux/user/user-action'
 import {selectCurrentUser} from './redux/user/user-selectors' 
 
-import HomePage from './containers/Home-Page'
+import HomePage from './containers/Home-Page/index'
 import Shop from './containers/Shop-Page'
 import Navbar from './containers/Navbar'
 import Identify from './containers/Identify-Page'
