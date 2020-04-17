@@ -17,11 +17,11 @@ import './style.scss'
 const Navbar = ({ currentUser, hidden }) => {
   return (
     <div className="header">
-      <Link className='logo' to="/">
+      <Link className='logo' to="/online-store">
         <Logo />
       </Link>
       <div className="options">
-        <Link className="option" to="/">
+        <Link className="option" to="/online-store">
           HOME
       </Link>
         <Link className="option" to="/shop">
