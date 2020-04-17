@@ -5,8 +5,8 @@ import { createStructuredSelector } from 'reselect'
 import {selectCartItems, selectCartTotal} from '../../redux/cart/cart-selectors'
 
 import './style.scss'
-import CheckoutItem from '../../components/CheckoutItem/view'
-import StripeCheckoutButton from '../../components/StripeCheckoutButton'
+import CheckoutItem from '../../Components/CheckoutItem/view'
+import StripeCheckoutButton from '../../Components/StripeCheckoutButton'
 
 const Checkout = ({cartItems, total})=>{
   return(

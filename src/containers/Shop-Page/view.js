@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 import './style.scss'
-import Collections from '../../components/Collections'
+import Collections from '../../Components/Collections'
 import Category from '../Category-Page'
 
 

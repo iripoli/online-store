@@ -8,8 +8,8 @@ import { selectCurrentUser } from '../../redux/user/user-selectors'
 
 import { auth } from '../../firebase/config'
 
-import CartIcon from '../../components/Cart-Icon'
-import CartDropDown from '../../components/CartDropDown'
+import CartIcon from '../../Components/Cart-Icon'
+import CartDropDown from '../../Components/CartDropDown'
 
 import { ReactComponent as Logo } from '../../assets/img/logo.svg'
 import './style.scss'
