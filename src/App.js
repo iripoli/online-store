@@ -49,11 +49,11 @@ unsubscribeFromAuth=null
     <div>
     <Navbar />
       <Switch>
-        <Route exact path="/online-store" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
         <Route  path="/shop" component={Shop} />
         <Route exact path="/checkout" component={Checkout} />
         <Route exact path="/identify" render={()=>this.props.currentUser 
-          ? (<Redirect to='/online-store' />) 
+          ? (<Redirect to='/' />) 
           : (<Identify /> )} />
       </Switch>
     </div>
