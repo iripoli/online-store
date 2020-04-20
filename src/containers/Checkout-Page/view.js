@@ -29,8 +29,11 @@ const Checkout = ({cartItems, total})=>{
         </div>
       </div>
       {
+        cartItems.length !== 0 ?
         cartItems.map(cartItem=><CheckoutItem key={cartItem.id} cartItem={cartItem} />)
+        : <div className="no-items-message">ADD ITEMS TO CART</div>
       }
+
       <div className="total">
         <span>TOTAL: €{total}</span>
       </div>
