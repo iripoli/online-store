@@ -1,8 +1,8 @@
 import React from 'react'
 
 import './style.scss'
-import SignIn from '../../Components/SignIn'
-import SignUp from '../../Components/SignUp'
+import SignIn from '../../components/SignIn'
+import SignUp from '../../components/SignUp'
 
 const Identify= () =>{
   return (
