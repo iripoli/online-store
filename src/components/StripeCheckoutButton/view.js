@@ -3,16 +3,27 @@ import React from 'react'
 import StripeCheckout from 'react-stripe-checkout'
 
 import './style.scss'
+import { clearCart } from '../../redux/cart/cart-actions'
+import { connect } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 
 
-const StripeCheckoutButton = ({ price, cartItems }) => {
+const StripeCheckoutButton = ({ price, cartItems, clearCart }) => {
   const priceForStripe = price * 100
   const publicKey = 'pk_test_3nKidwn5ey5dlvET6UgziQ2S'
+  const history = useHistory()
   
-  const onToken = token => {
+
+
+  const onToken = (token) => {
     console.log(token)
-    alert('Payment Succesful')
+    clearCart(cartItems)
+    history.push('/')
+    
+
   }
+
+
 
 
 
@@ -44,4 +55,8 @@ const StripeCheckoutButton = ({ price, cartItems }) => {
   )
 }
 
-export default StripeCheckoutButton
+const mapDispatchToProps = dispatch=>({
+  clearCart: item=>dispatch(clearCart(item))
+ })
+
+export default connect(null, mapDispatchToProps)(StripeCheckoutButton)
