@@ -1,6 +1,6 @@
 .order-completed{
   flex-direction: column;
-  font-size: 2rem;
+
   margin: 6rem 0;
   height: auto;
   width: 100%;
@@ -8,8 +8,13 @@
   div{
     display: flex;
     justify-content: center;
-    width: 50rem;
+    width: auto;
     
+  }
+
+  p{
+    font-size: 2rem;
+    text-align: center;
   }
 
   img{
