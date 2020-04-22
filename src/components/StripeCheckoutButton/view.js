@@ -18,14 +18,10 @@ const StripeCheckoutButton = ({ price, cartItems, clearCart }) => {
   const onToken = (token) => {
     console.log(token)
     clearCart(cartItems)
-    history.push('/')
+    history.push('/ordercompleted')
     
 
   }
-
-
-
-
 
   return (
     <div className="pay-button">

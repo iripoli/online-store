@@ -14,6 +14,7 @@ import Navbar from './containers/Navbar'
 import Identify from './containers/Identify-Page'
 import Checkout from './containers/Checkout-Page'
 import './App.css';
+import OrderCompleted from './containers/OrderCompleted-Page/view';
 
 
 class App extends React.Component {
@@ -55,6 +56,7 @@ unsubscribeFromAuth=null
         <Route exact path="/identify" render={()=>this.props.currentUser 
           ? (<Redirect to='/' />) 
           : (<Identify /> )} />
+        <Route exact path="/ordercompleted" component={OrderCompleted} />
       </Switch>
     </div>
   );}
