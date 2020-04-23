@@ -16,7 +16,6 @@
   .preview {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
 
     .see-more{
       display: flex;
@@ -24,4 +23,12 @@
       font-weight: bold;
     }
   }
+}
+
+@media (max-width: 450px){
+  .preview {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 }
