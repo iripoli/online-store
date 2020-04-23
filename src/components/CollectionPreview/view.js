@@ -2,17 +2,39 @@ import React from 'react'
 
 import './style.scss'
 import CollectionItem from '../CollectionItem/view'
+import Slider from '../Slider'
+import { Link } from 'react-router-dom'
 
-const CollectionPreview = ({items, title})=>{
-
-  return(
+const CollectionPreview = ({ items, title }) => {
+  return (
     <div className="collectionPreview">
-      <h1 className="title">{title.toUpperCase()}</h1>
+      <h1 className="title">
+      <Link to={`/shop/${title.toLowerCase()}`}>
+        {title.toUpperCase()}
+      </Link>
+      </h1>
       <div className="preview">
-        {items
-        .filter((item, idx)=>idx < 4)
-        .map((item)=>
-        <CollectionItem key={item.id} item={item} />)}
+        {
+          window.innerWidth < 628 ?
+
+          <Slider loop={true}
+            selected={0}
+            showArrows={true}>
+            {
+              items
+                .filter((item, idx) => idx < 4)
+                .map((item) =>
+                  <CollectionItem key={item.id} item={item} />
+                )
+            }
+          </Slider>
+          : items
+                .filter((item, idx) => idx < 4)
+                .map((item) =>
+                  <CollectionItem key={item.id} item={item} />
+                )
+
+        }
       </div>
     </div>
   )

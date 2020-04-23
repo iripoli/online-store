@@ -12,3 +12,20 @@
     justify-content: space-between;
   }
 }
+
+@media (max-width: 450px){
+  .sign-in{
+    width: 18rem;
+  }
+
+  .buttons{
+    width: auto;
+    flex-direction: column;
+    margin: 7px;
+  }
+
+  .button{
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
