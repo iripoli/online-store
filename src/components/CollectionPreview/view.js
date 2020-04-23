@@ -19,7 +19,8 @@ const CollectionPreview = ({ items, title }) => {
             ? <>
             <Slider loop={true}
               selected={0}
-              showArrows={true}>
+              showArrows={true}
+              bullets={true}>
               {
                 items
                   .filter((item, idx) => idx < 4)
