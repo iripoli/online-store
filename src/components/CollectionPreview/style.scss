@@ -16,5 +16,12 @@
   .preview {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    .see-more{
+      display: flex;
+      justify-content: flex-end;
+      font-weight: bold;
+    }
   }
 }
