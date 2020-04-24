@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {auth, signInWithGoogle } from '../../firebase/config'
+import {auth, signInWithGoogle } from '../../firebase/firebase-utils'
 
 import './style.scss'
 import FormInput from '../Form-Input/view'

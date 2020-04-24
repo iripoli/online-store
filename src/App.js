@@ -4,9 +4,10 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
-import { auth, createUserProfileDoc } from './firebase/config'
+import { auth, createUserProfileDoc } from './firebase/firebase-utils'
 import { setCurrentUser } from './redux/user/user-action'
 import {selectCurrentUser} from './redux/user/user-selectors' 
+import { selectCollectionsForPreview } from './redux/shop/shop-selector'
 
 import HomePage from './containers/home-page/view'
 import Shop from './containers/Shop-Page'
@@ -62,7 +63,8 @@ unsubscribeFromAuth=null
   );}
 }
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview 
 })
 
 const mapDispatchToProps = dispatch=>({

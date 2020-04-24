@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {auth, createUserProfileDoc} from '../../firebase/config'
+import {auth, createUserProfileDoc} from '../../firebase/firebase-utils'
 
 import FormInput from '../Form-Input'
 import Button from '../Button'
